@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Music player</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./ms.css">
+    <link rel="shortcut icon" href="#">
+    <link rel="icon" href="./assets/img/logo.jpg" sizes="16x16">
+</head>
+
+<body>
+    <div class="player">
+        <!-- Dashboard -->
+        <div class="dashboard">
+            <video autoplay loop muted class="music-card__background" src="./assets/video/Cool Chill Lofi Background Music For Videos.mp4"></video>
+            <!-- Header -->
+            <header>
+                <h4>Now playing:</h4>
+                <h2>String 57th & 9th</h2>
+            </header>
+
+            <!-- CD -->
+            <div class="cd">
+                <div class="cd-thumb"
+                    style="background-image: url('https://photo-resize-zmp3.zmdcdn.me/w480_r1x1_webp/cover/0/8/5/0/0850b7d79b732fd99e3383909f807d58.jpg');">
+                </div>
+            </div>
+
+            <!-- Volumn -->
+            <div class="volume-block">
+                <div class="btn btn-volume">
+                    <div class="volume-icon">
+                        <i
+                            class="fa-solid fa-volume-high btn-volume__high"
+                        ></i>
+                        <i
+                            class="fa-solid fa-volume-xmark btn-volume__mute"
+                            style="display: none"
+                        ></i>
+                    </div>
+                    <input
+                        class="volume-progress"
+                        type="range"
+                        value="100"
+                        step="1"
+                        min="0"
+                        max="100"
+                    />
+                </div>
+            </div>
+            <!-- Control -->
+            <div class="control">
+                <div class="btn btn-repeat">
+                    <i class="fas fa-redo"></i>
+                </div>
+                <div class="btn btn-prev">
+                    <i class="fas fa-step-backward"></i>
+                </div>
+                <div class="btn btn-toggle-play">
+                    <i class="fas fa-pause icon-pause"></i>
+                    <i class="fas fa-play icon-play"></i>
+                </div>
+                <div class="btn btn-next">
+                    <i class="fas fa-step-forward"></i>
+                </div>
+                <div class="btn btn-random">
+                    <i class="fas fa-random"></i>
+                </div>
+            </div>
+
+            <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+            <div class="progress-time">
+                <div class="progress-start-time">00:00</div>
+                <div class="progress-start-end">00:00</div>
+            </div>
+            <audio id="audio" src=""></audio>
+        </div>
+
+        <!-- Playlist -->
+        <div class="playlist">
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="./ms.js"></script>
